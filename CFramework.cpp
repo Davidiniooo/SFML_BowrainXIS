@@ -1,25 +1,23 @@
 #include<SFML/Window.hpp>
+#include<SFML/Graphics.hpp>
 
 #include"CFramework.hpp"
 
 CFramework::CFramework()
 {
-  window = new sf::RenderWindow;
+  window.create(sf::VideoMode(800, 600), "BowrainXIS");
+  window.setVerticalSyncEnabled(true);
 
-  window->create(sf::VideoMode(800, 600), "BowrainXIS");
-  window->setVerticalSyncEnabled(true);
-
-  window->clear();
-  window->display();
+  window.clear();
 }
 
-CFramework::display()
+void CFramework::display()
 {
-  window->display();
-  window->clear();
+  window.display();
+  window.clear();
 }
 
-CFramework::renderSprite(&sf::Sprite sprite)
+void CFramework::renderSprite(sf::Sprite &sprite)
 {
-  window->draw(sprite);
+  window.draw(sprite);
 }
