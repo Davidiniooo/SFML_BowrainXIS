@@ -5,16 +5,16 @@
 
 CFramework::CFramework()
 {
-  window.create(sf::VideoMode(800, 600), "BowrainXIS");
-  window.setVerticalSyncEnabled(true);
+  window.create(sf::VideoMode(800, 600), "BowrainXIS"); //creates window
+  window.setVerticalSyncEnabled(true);                  
 
   window.clear();
 }
 
 void CFramework::display()
 {
-  window.display();
   window.clear();
+  window.display();
 }
 
 void CFramework::renderSprite(sf::Sprite &sprite)
