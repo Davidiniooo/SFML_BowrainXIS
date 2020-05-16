@@ -1,9 +1,12 @@
 #include "CFramework.hpp"
+#include "CDrawableObject.hpp"
 
-int main(int argc, char const *argv[]) {
-  CFramework fwork;
-  while (true) {
-    fwork.display();
-  }
+int main()
+{
+  CDrawableObject object("Textures/basic_player.png", 0, 0, 1024, 1024, 0);
+  object.render();
+  g_pFramework->display();
+
+  while(true);
   return 0;
 }
