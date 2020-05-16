@@ -11,7 +11,7 @@
 class CFramework : public TSingleton<CFramework>
 {
 public:
-  void renderSprite(sf::Sprite &sprite);  //takes a sprite and renders it
+  void renderSprite(sf::Sprite sprite);  //takes a sprite and renders it
   void display();                         //displays all graphics that got rendered in last tick
   CFramework();                           //constructor
 
