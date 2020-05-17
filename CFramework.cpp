@@ -10,11 +10,11 @@ void CFramework::init(int width, int height){
   window.clear();
 }
 
-void CFramework::display()  //display function{
+void CFramework::display(){  //display function
   window.display();
 }
 
-void CFramework::renderSprite(sf::Sprite sprite)  //function to render a Sprite{
+void CFramework::renderSprite(sf::Sprite sprite){  //function to render a Sprite
   window.draw(sprite);
 }
 

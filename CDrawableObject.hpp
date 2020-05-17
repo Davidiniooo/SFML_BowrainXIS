@@ -20,7 +20,7 @@ public:
   float m_x;   // x-Coords
   float m_y;   // y-Coords
   float m_rotation;   // The objects rotation
-  char id;   // id for tracking purpose
+  long long id;   // id for tracking purpose
 };
 
 #endif
