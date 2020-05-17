@@ -1,6 +1,9 @@
 #include<SFML/Graphics.hpp>   //Graphics-Library
 #include "GameInformation.hpp"
 
+#ifndef CDRAWABLEOBJECT_HPP
+#define CDRAWABLEOBJECT_HPP
+
 class CDrawableObject
 {
 public:
@@ -21,4 +24,7 @@ protected:
   float m_y;   // y-Coords
   float m_rotation;   // The objects rotation
   unsigned long long m_id;   // id for tracking purpose
+
 };
+
+#endif

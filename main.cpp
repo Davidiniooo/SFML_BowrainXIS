@@ -7,11 +7,11 @@ int main()
   unsigned long long globalid = 0;
 
   g_pFramework->init(512,512);
-  CDrawableObject object;
+  CEntity object;
   object.setId(globalid);
   globalid++;
   object.init("Textures/basic_player.png", 0.f, 0.f, 512.f, 512.f, 0.f);
-
+  object.setValues(100,1,1,0);
   CBlock block;
   block.setId(globalid);
   globalid++;
@@ -32,7 +32,7 @@ int main()
     {
       iteratorCDrawableObject->render();
     }
-    g_pFramework->display();
+
   }
   return 0;
 }
