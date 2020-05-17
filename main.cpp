@@ -1,17 +1,38 @@
 #include "CFramework.hpp"
-#include "CDrawableObject.hpp"
-#include "CEntity.hpp"
+#include "CBlock.hpp"
+#include <list>
 
-int main(){
-  g_pFramework->init(1024,1024);
-  CEntity entity;
-  entity.init("Textures/basic_player.png", 0.f, 0.f, 512.f, 512.f, 0.f);
-  entity.setValues(100.f, 1.0f, 30.f, 315.f);
+int main()
+{
+  unsigned long long globalid = 0;
+
+  g_pFramework->init(512,512);
+  CEntity object;
+  object.setId(globalid);
+  globalid++;
+  object.init("Textures/basic_player.png", 0.f, 0.f, 512.f, 512.f, 0.f);
+  object.setValues(100,1,1,0);
+  CBlock block;
+  block.setId(globalid);
+  globalid++;
+  block.init("Textures/basic_player.png", 0.f, 0.f, 12.f, 12.f, 0.f);
+  block.setValues(10,true);
+
+  std::list<CDrawableObject> objects;
+  objects.push_back(object);
+  objects.push_back(block);
+  std::list<CDrawableObject>::iterator iteratorCDrawableObject;
+
+  iteratorCDrawableObject = objects.begin();
+
   while (true){
+
     g_pFramework->reset();
-    entity.update();
-    entity.render();
-    g_pFramework->display();
+    for(iteratorCDrawableObject = objects.begin();iteratorCDrawableObject != objects.end();iteratorCDrawableObject++)
+    {
+      iteratorCDrawableObject->render();
+    }
+
   }
   return 0;
 }
