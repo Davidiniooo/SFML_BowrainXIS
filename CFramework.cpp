@@ -5,24 +5,20 @@
 
 CFramework::CFramework(){}
 
-void CFramework::init(int width, int height)
-{
+void CFramework::init(int width, int height){
   window.create(sf::VideoMode(width, height), "BowrainXIS"); //creates window
   window.clear();
 }
 
-void CFramework::display()  //display function
-{
+void CFramework::display()  //display function{
   window.display();
 }
 
-void CFramework::renderSprite(sf::Sprite sprite)  //function to render a Sprite
-{
+void CFramework::renderSprite(sf::Sprite sprite)  //function to render a Sprite{
   window.draw(sprite);
 }
 
-void CFramework::reset()
-{
+void CFramework::reset(){
   g_pTimer->reset();
   window.clear();
 }

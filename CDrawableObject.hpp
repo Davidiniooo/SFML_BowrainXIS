@@ -1,5 +1,8 @@
 #include<SFML/Graphics.hpp>   //Graphics-Library
 
+#ifndef CDRAWABLEOBJECT_HPP
+#define CDRAWABLEOBJECT_HPP
+
 class CDrawableObject
 {
 public:
@@ -19,3 +22,5 @@ public:
   float m_rotation;   // The objects rotation
   char id;   // id for tracking purpose
 };
+
+#endif
