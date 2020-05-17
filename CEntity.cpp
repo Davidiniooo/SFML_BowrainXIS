@@ -1,7 +1,6 @@
 #include "CEntity.hpp"
 #include "Timer.hpp"
 #include <math.h>
-#include<iostream>
 
 #define PI 3.14159265358979323846264338327950288419716939937510   //define PI
 
@@ -32,6 +31,6 @@ void CEntity::setHealthpoints(float healthpoints){
 
 void CEntity::update(){
   float distance = g_pTimer->getElapsed()*m_velocity;
-  if(cos(2*PI*(m_direction/360))!=0){m_x += cos(2*PI*(m_direction/360))*distance;std::cout << cos(m_direction) << '\n';}
+  if(cos(2*PI*(m_direction/360))!=0){m_x += cos(2*PI*(m_direction/360))*distance;}
   if(sin(2*PI*(m_direction/360))!=0){m_y -= sin(2*PI*(m_direction/360))*distance;}
 }
