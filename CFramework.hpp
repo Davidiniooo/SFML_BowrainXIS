@@ -13,7 +13,7 @@ class CFramework : public TSingleton<CFramework>
 {
 public:
   CFramework();                           //constructor
-  void init(int width,int height);        //init window with height and width              
+  void init(int width,int height);        //init window with height and width
   void reset();                           //resets timer and graphics buffer
   void renderSprite(sf::Sprite sprite);   //takes a sprite and renders it
   void display();                         //displays all graphics that got rendered in last tick

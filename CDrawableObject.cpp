@@ -1,9 +1,7 @@
 #include "CDrawableObject.hpp"
 #include "CFramework.hpp"
 
-
 CDrawableObject::CDrawableObject(){}
-
 
 void CDrawableObject::setId(unsigned long long id){
   m_id = id;
