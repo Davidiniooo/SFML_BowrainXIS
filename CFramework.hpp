@@ -19,9 +19,11 @@ public:
   void display();                         //displays all graphics that got rendered in last tick
   sf::Event getEvent(){return event;}
 
+  bool windowIsAlive; //TODO: Change to private
 private:
   sf::RenderWindow window;
   sf::Event event;
+
 };
 
 #endif

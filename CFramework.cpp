@@ -8,6 +8,7 @@ CFramework::CFramework(){}
 void CFramework::init(int width, int height){
   window.create(sf::VideoMode(width, height), "BowrainXIS"); //creates window
   window.clear();
+  windowIsAlive = true;
 }
 
 void CFramework::display(){  //display function
@@ -19,6 +20,12 @@ void CFramework::renderSprite(sf::Sprite sprite){  //function to render a Sprite
 }
 
 void CFramework::reset(){
+  window.pollEvent(event);
+  if(event.type == sf::Event::Closed){
+    window.close();
+    windowIsAlive = false;
+    return;
+  }
   g_pTimer->reset();
   window.clear();
 }
