@@ -1,5 +1,6 @@
 #include"Singleton.cpp"
 #include"Hitbox.cpp"
+#include"CDrawableObject.hpp"
 #include<list>
 
 #ifndef GAMEINFORMATION_HPP
@@ -12,7 +13,9 @@ public:
   void addHitbox(unsigned long long id, sf::FloatRect rect);
   std::list<Hitbox> getHitboxes(){return list_hitboxes;}
 private:
+
   std::list<Hitbox> list_hitboxes;
+  std::list<CDrawableObject> list_objects;
 };
 
 #endif

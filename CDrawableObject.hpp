@@ -1,5 +1,5 @@
 #include<SFML/Graphics.hpp>   //Graphics-Library
-#include"GameInformation.hpp"
+
 
 #ifndef CDRAWABLEOBJECT_HPP
 #define CDRAWABLEOBJECT_HPP

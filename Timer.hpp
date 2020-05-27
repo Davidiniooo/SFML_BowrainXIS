@@ -1,8 +1,8 @@
-#ifndef TIMER_HPP
-#define TIMER_HPP
-
 #include<SFML/Graphics.hpp>
 #include"Singleton.cpp"
+
+#ifndef TIMER_HPP
+#define TIMER_HPP
 
 #define g_pTimer CTimer::Get()
 

@@ -1,5 +1,8 @@
 #include "CDrawableObject.hpp"
 
+#ifndef CENTITY_HPP
+#define CENTITY_HPP
+
 class CEntity : public CDrawableObject
 {
 public:
@@ -16,3 +19,5 @@ protected:
   float m_velocity;
   float m_direction;
 };
+
+#endif
